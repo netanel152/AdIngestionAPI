@@ -2,11 +2,9 @@ using AdIngestionAPI.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 1. Logging
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
 
-// 2. Services
 builder.Services.AddOpenApi();
 builder.Services.AddIngestionServices(builder.Configuration);
 
